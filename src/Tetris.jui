@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" language="jambi">
+ <class>Tetris</class>
+ <widget class="QWidget" name="Tetris">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>328</width>
+    <height>347</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>com.trolltech.qt.core.Qt.FocusPolicy.StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" language="jambi">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>432</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>Tetris (par SPOT)</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#frame, #suivFrm {
+	border: 1px solid rgb(220, 202, 103);
+}
+
+#pointsLb, #msgLb {
+	color: rgb(220, 202, 103);
+}
+
+#nouvBtn {
+	border: 0px;
+	background-image: url(classpath:img/rejouer2.png);
+}
+
+#nouvBtn::hover {
+	background-image: url(classpath:img/rejouer.png);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="1">
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>400</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>400</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string/>
+      </property>
+      <property name="frameShape">
+       <enum>com.trolltech.qt.gui.QFrame.Shape.NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>com.trolltech.qt.gui.QFrame.Shadow.Plain</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gl"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>com.trolltech.qt.gui.QFrame.Shape.StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>com.trolltech.qt.gui.QFrame.Shadow.Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="4" column="0" colspan="2">
+        <widget class="QLabel" name="pointsLb">
+         <property name="font">
+          <font>
+           <family>Zero Twos</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>0 pts</string>
+         </property>
+         <property name="alignment">
+          <set>com.trolltech.qt.core.Qt.AlignmentFlag.AlignRight|com.trolltech.qt.core.Qt.AlignmentFlag.AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>com.trolltech.qt.core.Qt.Orientation.Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="1">
+        <widget class="QFrame" name="suivFrm">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>com.trolltech.qt.gui.QFrame.Shape.NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>com.trolltech.qt.gui.QFrame.Shadow.Plain</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="nextGl"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>com.trolltech.qt.core.Qt.Orientation.Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLabel" name="msgLb">
+         <property name="font">
+          <font>
+           <family>Zero Twos</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Niveau 1</string>
+         </property>
+         <property name="alignment">
+          <set>com.trolltech.qt.core.Qt.AlignmentFlag.AlignRight|com.trolltech.qt.core.Qt.AlignmentFlag.AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="2">
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>com.trolltech.qt.gui.QFrame.Shape.StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>com.trolltech.qt.gui.QFrame.Shadow.Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="nouvBtn">
+            <property name="minimumSize">
+             <size>
+              <width>168</width>
+              <height>56</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>168</width>
+              <height>56</height>
+             </size>
+            </property>
+            <property name="palette">
+             <palette>
+              <active/>
+              <inactive/>
+              <disabled/>
+             </palette>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>432</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
